@@ -11,17 +11,30 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import THREE from 'three';
+import {Scene, PerspectiveCamera, WebGLRenderer, } from 'three';
 
 @Component
 export default class App extends Vue {
-    private renderer: THREE.WebGLRenderer | undefined;
+
+    private renderer: WebGLRenderer | undefined;
+    private scene: Scene = new Scene();
+    private camera: PerspectiveCamera = new PerspectiveCamera( 40, window.innerWidth / window.innerHeight, 1, 10000 );
+    private particles: number;
+
+    constructor () {
+        super();
+        this.renderer = new WebGLRenderer();
+        this.scene = new Scene();
+        this.camera = new PerspectiveCamera( 40, window.innerWidth / window.innerHeight, 1, 10000 );
+        this.particles = 100000;
+    }
 }
 </script>
 
 <style lang="scss">
 .anim-ctn {
     position: relative;
+    height: 100vh
 }
 
 .anim-frame {
