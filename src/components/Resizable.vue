@@ -17,8 +17,8 @@ import { Maybe } from 'maybe-monad';
 export default class Resizable extends Vue {
     // Props
     @Prop({ default: () => defaultBreakpoints }) private breakpoints!: IBreakpoints;
-    @Prop({ default: true }) private onlyOnBreak!: boolean; // Default true saves unecessary computation
-    @Prop({ default: false }) private noWrap!: boolean;
+    @Prop({ default: true }) private onlyOnBreak?: boolean; // Default true saves unecessary computation
+    @Prop({ default: false }) private noWrap?: boolean;
     @Prop({ default: () => Object.create({}) }) private wrapStyle!: object;
     // Data
     private containerWidth: number = 0;

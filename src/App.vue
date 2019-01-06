@@ -3,7 +3,7 @@
     <div v-if="noWebGL" >
       {{noWebGLMessage}}
     </div>
-    <resizable v-else>
+    <resizable v-else :onlyOnBreak="false">
       <animation-container slot-scope="resizableScope" :width="resizableScope.cWidth" :height="resizableScope.cHeight">
         <router-view slot="main-app"/>
       </animation-container>
@@ -49,7 +49,7 @@ export default class App extends Vue {
 
 body {
   color: #ffffff;
-  background-color: #000000;
+  // background-color: #000000;
   margin: 0px;
   overflow: hidden;
 }
