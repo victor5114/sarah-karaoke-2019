@@ -5,7 +5,8 @@
     </div>
     <resizable v-else :onlyOnBreak="false">
       <animation-container slot-scope="resizableScope" :width="resizableScope.cWidth" :height="resizableScope.cHeight">
-        <router-view slot="main-app"/>
+        <nav-header slot="nav-header" />
+        <router-view slot="app-content" />
       </animation-container>
     </resizable>
   </div>
@@ -16,10 +17,12 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 import WEBGL from '@/lib/WebGL.ts';
 import AnimationContainer from '@/components/AnimationContainer.vue';
 import Resizable from '@/components/Resizable.vue';
+import NavHeader from '@/components/NavHeader.vue';
 
 @Component({
   components: {
     'animation-container': AnimationContainer,
+    'nav-header': NavHeader,
     'resizable': Resizable
   }
 })

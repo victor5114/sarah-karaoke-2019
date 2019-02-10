@@ -1,10 +1,9 @@
 <template>
     <div class="anim-ctn">
-        <div class="anim-frame" ref="anim_frame">
-            
-        </div>
-        <div style="position: absolute">
-            <slot name="main-app"></slot>
+        <div class="anim-frame" ref="anim_frame" />
+        <div class="main-app-ctn">
+            <slot name="nav-header"></slot>
+            <slot name="app-content"></slot>
         </div>
     </div>   
 </template>
@@ -43,8 +42,9 @@ export default class AnimationContainer extends Vue {
         super();
         this.renderer = new WebGLRenderer();
         this.scene = new Scene();
+        this.scene.background = new Color( 0x2a2a2a );
         this.camera = new PerspectiveCamera( 40, this.width / this.height, 1, 10000 );
-        this.particles = 100000;
+        this.particles = 50000;
         this.particleSystem = new Points();
     }
 
@@ -89,7 +89,6 @@ export default class AnimationContainer extends Vue {
 
         this.renderer.setPixelRatio( window.devicePixelRatio );
         this.renderer.setSize( this.width, this.height );
-
         this.$el.childNodes[0].appendChild(this.renderer.domElement);
     }
 
@@ -134,6 +133,11 @@ export default class AnimationContainer extends Vue {
 
 .anim-frame {
     position: fixed; width: 100vw; height: 100vh;
+}
+
+.main-app-ctn {
+    position: relative;
+    z-index: 1;
 }
 
 </style>
