@@ -7,17 +7,28 @@ Vue.use(Router);
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'home',
-      component: Home,
+      path: '/songs',
+      name: 'songs',
+      component: () =>
+        import(/* webpackChunkName: "songs" */ './views/SongsComponent.vue'),
     },
     {
-      path: '/about',
-      name: 'about',
+      path: '/users',
+      name: 'users',
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
+      component: () =>
+        import(/* webpackChunkName: "users" */ './views/UsersComponent.vue'),
+    },
+    {
+      path: '/track-listing',
+      name: 'track-listing',
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () =>
+        import(/* webpackChunkName: "track-listing" */ './views/TrackListingComponent.vue'),
     },
   ],
 });

@@ -1,14 +1,14 @@
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
-import store from './store';
+import store from '@/store/store';
 import './registerServiceWorker';
 
 import '@/assets/styles/normalize.css';
 import '@/assets/styles/utility.scss';
 
 Vue.config.productionTip = false;
-
+console.log(process.env.ENV);
 new Vue({
   router,
   store,

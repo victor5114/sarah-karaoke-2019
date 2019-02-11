@@ -60,8 +60,9 @@ export default class NavHeader extends Vue {
                 color: #fff;
                 position: relative;
                 cursor: pointer;
+                background-position: 0% 0%;
                 transition: .5s all;
-
+                
                 img {
                     left: 0;
                     top: 0;
