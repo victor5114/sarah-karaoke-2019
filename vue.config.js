@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const config = require('./config');
 // vue.config.js
+
 module.exports = {
   configureWebpack: {
       plugins: [

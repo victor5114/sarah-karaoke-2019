@@ -8,7 +8,7 @@ import '@/assets/styles/normalize.css';
 import '@/assets/styles/utility.scss';
 
 Vue.config.productionTip = false;
-console.log(process.env.ENV);
+
 new Vue({
   router,
   store,

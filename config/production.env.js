@@ -1,4 +1,6 @@
-// Set here common variables that doesn't depend on environnement
+
 module.exports = {
-  ENV: '"production"'
+  FIREBASE_API_KEY: 'AIzaSyDjVTKmIOJHWy9axPPTGB8XkDW_22_qVj4',
+  FIREBASE_PROJECT_ID: 'sarah-karaoke',
+  FIREBASE_AUTH_DOMAIN: 'sarah-karaoke.firebaseapp.com'
 };
