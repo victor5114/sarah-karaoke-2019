@@ -1,11 +1,11 @@
 <template>
     <div class="anim-ctn">
         <div class="anim-frame" ref="anim_frame" />
-        <div class="main-app-ctn">
+        <div class="main-app-ctn full-h">
             <slot name="nav-header"></slot>
             <slot name="app-content"></slot>
         </div>
-    </div>   
+    </div>
 </template>
 
 <script lang="ts">
@@ -65,7 +65,7 @@ export default class AnimationContainer extends Vue {
         });
 
         const radius = 200;
-        
+
         const positions = [];
         const colors = [];
         const sizes = [];
@@ -92,7 +92,7 @@ export default class AnimationContainer extends Vue {
         this.$el.childNodes[0].appendChild(this.renderer.domElement);
     }
 
-    private animate () { 
+    private animate () {
         requestAnimationFrame(this.animate);
         this.renderAnimation();
     }

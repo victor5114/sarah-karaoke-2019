@@ -10,6 +10,7 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "@firebase/firestore": "^1.0.3",
     "@types/lodash": "^4.14.119",
     "@types/three": "^0.93.15",
     "axios": "^0.18.0",

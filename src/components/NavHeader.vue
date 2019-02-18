@@ -31,15 +31,17 @@ export default class NavHeader extends Vue {
 </script>
 
 <style lang="scss">
+
+$img-height: 120px;
+
 .nav-header {
-    
     ul.nav-list {
         list-style-type: none;
 
         li.nav-elem {
-            height: 130px;
+            height: $img-height;
             margin: 20px 10px 0px 10px;
-            
+
         }
 
         li.nav-elem {
@@ -62,7 +64,7 @@ export default class NavHeader extends Vue {
                 cursor: pointer;
                 background-position: 0% 0%;
                 transition: .5s all;
-                
+
                 img {
                     left: 0;
                     top: 0;
@@ -70,7 +72,7 @@ export default class NavHeader extends Vue {
                     z-index: 1;
                     opacity: .9;
                     mix-blend-mode: screen;
-                    height: 130px;
+                    height: $img-height;
                     padding: 20px;
                 }
 
