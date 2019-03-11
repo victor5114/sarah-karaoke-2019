@@ -183,6 +183,16 @@ textarea {
   margin: 0;
 }
 
+/**
+ * Remove the list style on navigation lists in all browsers (opinionated).
+ */
+
+ul,
+nav ol,
+nav ul {
+  list-style: none;
+}
+
 button,
 input {
   line-height: normal;

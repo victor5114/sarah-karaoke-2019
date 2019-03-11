@@ -22,7 +22,6 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
-// import Album from '@/assets/album.svg';
 
 @Component
 export default class NavHeader extends Vue {
@@ -32,16 +31,19 @@ export default class NavHeader extends Vue {
 
 <style lang="scss">
 
-$img-height: 120px;
+@import './NavHeader.scss';
 
 .nav-header {
+  height: $header-size;
+  position: fixed;
+  width: 100%;
+
     ul.nav-list {
         list-style-type: none;
 
         li.nav-elem {
             height: $img-height;
             margin: 20px 10px 0px 10px;
-
         }
 
         li.nav-elem {

@@ -1,30 +1,30 @@
 <template>
   <div class="song-component-ctn full-h">
       <div class="song-component-list-ctn full-h">
-        <div class="songs-button-ctn">
-          <button class="songs-button songs-button-backward"></button>
+        <div class="songs-listing full-h">
+          <ul class="songs-listing-list full-h">
+            <li v-bind:key="a" v-for="a in Array(10).map((a, i) => i)" class="songs-listing-elem">
+              <div></div>
+            </li>
+          </ul>
         </div>
-        <div class="songs-button-ctn">
-          <button class="songs-button songs-button-forward"></button>
-        </div>
+        <song-listing-button :mode="'left'"></song-listing-button>
+        <song-listing-button :mode="'right'"></song-listing-button>
       </div>
   </div>
 </template>
-
-        .parent{
-  height: 100%;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-}
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import db from '@/lib/firestore';
 import { Song } from '@/components/Songs/Song.vue';
+import SongsListingButton from '@/components/Songs/SongsListingButton.vue';
 
-@Component
+@Component({
+  components: {
+    'song-listing-button': SongsListingButton,
+  }
+})
 export default class SongsComponent extends Vue {
   private page: number;
   private listSize: number;
@@ -58,35 +58,21 @@ export default class SongsComponent extends Vue {
 <style lang="scss">
   .song-component-ctn {
     display: block;
-    padding: 0 150px;
+    padding: 0 150px 40px 150px;
 
     .song-component-list-ctn {
       min-width: 400px;
       position: relative;
 
-      .songs-button-ctn {
-        height: 100%;
-        position: absolute;
-        width: 100%;
-        top: 0;
-        left: 0;
+      .songs-listing {
+        padding: 0px 50px;
 
-        .songs-button {
-          width: 40px;
-          height: 100px;
-          position: absolute;
-          top: 50%;
-          left: 0;
-          right: 0;
-          transform: translateY(-50%);
-        }
+        ul {
+          background-color: white;
 
-        .songs-button-backward {
-          left: 0;
-        }
-
-        .songs-button-forward {
-          right: 0;
+          .songs-listing-elem {
+            height: calc(100% / 10);
+          }
         }
       }
     }

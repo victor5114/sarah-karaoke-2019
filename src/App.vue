@@ -6,7 +6,7 @@
     <resizable v-else :onlyOnBreak="false">
       <animation-container slot-scope="resizableScope" :width="resizableScope.cWidth" :height="resizableScope.cHeight">
         <nav-header slot="nav-header" />
-        <router-view slot="app-content" />
+        <router-view slot="app-content" class="app-content" />
       </animation-container>
     </resizable>
   </div>
@@ -18,6 +18,8 @@ import WEBGL from '@/lib/WebGL.ts';
 import AnimationContainer from '@/components/AnimationContainer.vue';
 import Resizable from '@/components/Resizable.vue';
 import NavHeader from '@/components/NavHeader.vue';
+
+import './assets/styles/normalize.css';
 
 @Component({
   components: {
@@ -49,6 +51,7 @@ export default class App extends Vue {
 }
 </script>
 <style lang="scss">
+@import '@/components/NavHeader.scss';
 
 body {
   color: #ffffff;
@@ -63,5 +66,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+
+  .app-content {
+    padding-top: $header-size;
+  }
 }
 </style>
