@@ -58,11 +58,12 @@ export default class SongsComponent extends Vue {
 <style lang="scss">
   .song-component-ctn {
     display: block;
-    padding: 0 150px 40px 150px;
+    padding: 0 170px 40px 150px;
 
     .song-component-list-ctn {
       min-width: 400px;
       position: relative;
+      min-height: 400px;
 
       .songs-listing {
         padding: 0px 50px;
@@ -70,8 +71,25 @@ export default class SongsComponent extends Vue {
         ul {
           background-color: white;
 
-          .songs-listing-elem {
+          li.songs-listing-elem {
             height: calc(100% / 10);
+          }
+
+          li:nth-child(odd) {
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#848484+100,c6c6c6+100&0+24,0.65+83,0.65+99 */
+            background: -moz-linear-gradient(left, rgba(198,198,198,0) 24%, rgba(198,198,198,0.65) 83%, rgba(198,198,198,0.65) 99%, rgba(198,198,198,0.65) 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(left, rgba(198,198,198,0) 24%,rgba(198,198,198,0.65) 83%,rgba(198,198,198,0.65) 99%,rgba(198,198,198,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to right, rgba(198,198,198,0) 24%,rgba(198,198,198,0.65) 83%,rgba(198,198,198,0.65) 99%,rgba(198,198,198,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00c6c6c6', endColorstr='#a6c6c6c6',GradientType=1 ); /* IE6-9 */
+          }
+
+          li:nth-child(even) {
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d8d8d8+0,b7b7b7+100 */
+            background: rgb(216,216,216); /* Old browsers */
+            background: -moz-linear-gradient(left, rgba(216,216,216,1) 0%, rgba(183,183,183,1) 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(left, rgba(216,216,216,1) 0%,rgba(183,183,183,1) 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to right, rgba(216,216,216,1) 0%,rgba(183,183,183,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d8d8d8', endColorstr='#b7b7b7',GradientType=1 ); /* IE6-9 */
           }
         }
       }
