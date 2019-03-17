@@ -13,6 +13,15 @@ export type Song = {
   creationDate: Date;
 };
 
+export function generateEmptySongs(): Song {
+  return {
+    name: '',
+    artist: '',
+    link: '',
+    creationDate: new Date()
+  };
+}
+
 @Component
 export default class SongsListing extends Vue {
 }

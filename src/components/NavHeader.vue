@@ -2,7 +2,7 @@
     <nav class="nav-header">
       <div class="flex-h-v-center">
         <div class="g-flex-1">
-          <div class="text-nav text-left">
+          <div class="text-nav text-pink text-left">
             カラオケ
           </div>
         </div>
@@ -10,7 +10,7 @@
           <ul class="nav-list flex-h-v-center">
               <li class="nav-elem">
                   <router-link to="/songs" >
-                      <img class="picto-nav __img" src="../assets/icon/karaoke.svg" alt="">
+                      <img class="picto-nav" src="../assets/icon/karaoke.svg" alt="">
                   </router-link>
               </li>
               <li class="nav-elem">
@@ -26,7 +26,7 @@
           </ul>
         </div>
         <div class="g-flex-1">
-          <div class="text-nav text-right">
+          <div class="text-nav text-pink text-right">
             誕生日サラ
           </div>
         </div>
@@ -54,10 +54,6 @@ export default class NavHeader extends Vue {
 
   .text-nav {
     font-size: 6rem;
-    background: -webkit-linear-gradient(rgb(141, 0, 146), rgb(234, 129, 255));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 2px #fff;
   }
 
   ul.nav-list {

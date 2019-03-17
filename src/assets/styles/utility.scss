@@ -753,3 +753,10 @@ td.no-b {
 .pointer {
   cursor: pointer;
 }
+
+.text-pink {
+  background: -webkit-linear-gradient(rgb(141, 0, 146), rgb(234, 129, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 2px #fff;
+}
