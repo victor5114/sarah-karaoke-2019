@@ -17,10 +17,11 @@
                     </div>
                     <div v-if="song.name" class="song-definition g-flex-row full-h">
                       <div class="g-flex-2 pos-rel">
-                        <div class="pos-abs full-h" style="left: 0px;padding-left:40px">
-                          <div class="dib full-h pr10">
+                        <div class="pos-abs full-h" style="left: 0px;padding-left:70px">
+                          <div class="dib full-h pr20">
                             <div class="g-flex-justify-center g-flex-row-centered full-h">
-                              <font-awesome-icon icon="music" style="font-size: 4rem;color: rgb(234, 129, 255)"/>
+                              <!-- <font-awesome-icon icon="music" style="font-size: 4rem;color: rgb(234, 129, 255)"/> -->
+                              <img class="" src="../assets/icon/musical-note.svg" :style="{maxHeight: `${resizableScope.cHeight - 20}px`}" alt="">
                             </div>
                           </div>
                           <div class="dib full-h pl10" style="vertical-align: middle;">
@@ -30,7 +31,7 @@
                       </div>
                       <div class="g-flex-1 pos-rel">
                         <div class="pos-abs full-h" style="left: 0px;padding-left:0px">
-                          <div class="dib full-h pr10">
+                          <div class="dib full-h pr20">
                             <div class="g-flex-justify-center g-flex-row-centered full-h">
                               <img class="" src="../assets/icon/microphone.svg" :style="{maxHeight: `${resizableScope.cHeight - 20}px`}" alt="">
                             </div>
